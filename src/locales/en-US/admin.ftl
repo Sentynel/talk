@@ -39,6 +39,10 @@ userStatus-suspended = Suspended
 userStatus-premod = Always pre-moderate
 userStatus-warned = Warned
 
+# Queue Sort
+queue-sortMenu-newest = Newest
+queue-sortMenu-oldest = Oldest
+
 ## Navigation
 navigation-moderate = Moderate
 navigation-community = Community

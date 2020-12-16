@@ -53,5 +53,6 @@ export default async function initLocalState(
     localRecord.setValue(redirectPath, "redirectPath");
     localRecord.setValue("SIGN_IN", "authView");
     localRecord.setValue(error, "authError");
+    localRecord.setValue("CREATED_AT_DESC", "moderationQueueSort");
   });
 }
