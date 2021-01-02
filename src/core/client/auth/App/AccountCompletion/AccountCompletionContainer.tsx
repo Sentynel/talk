@@ -77,9 +77,11 @@ const AccountCompletionContainer: FunctionComponent<Props> = ({
 
     // If the local profile is enabled, and we don't have a local profile, then
     // create one.
+    /* AMG - disabled
     if (localProfileEnabled && !hasLocalProfile) {
       return "CREATE_PASSWORD";
     }
+    */
 
     // We have a complete account! Finish the authentication flow and send the
     // token back to the page.

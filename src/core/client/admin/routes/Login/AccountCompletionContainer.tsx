@@ -88,9 +88,11 @@ const AccountCompletionContainer: FunctionComponent<Props> = ({
 
     // If the local profile is enabled, and we don't have a local profile, then
     // create one.
+    /* AMG - disabled
     if (localProfileEnabled && !hasLocalProfile) {
       return "CREATE_PASSWORD";
     }
+    */
 
     async function finish() {
       try {

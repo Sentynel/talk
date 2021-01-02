@@ -28,7 +28,10 @@ const AccountSettingsContainer: FunctionComponent<Props> = ({
     <HorizontalGutter className={styles.root}>
       <ChangeUsernameContainer settings={settings} viewer={viewer} />
       <ChangeEmailContainer settings={settings} viewer={viewer} />
-      <ChangePasswordContainer settings={settings} />
+      {/* AMG add check */}
+      {!!viewer?.profiles.some((p) => p.__typename === "LocalProfile") && (
+        <ChangePasswordContainer settings={settings} />
+      )}
       {settings.accountFeatures.deleteAccount && (
         <DeleteAccountContainer viewer={viewer} settings={settings} />
       )}
@@ -42,6 +45,10 @@ const enhanced = withFragmentContainer<Props>({
       ...DeleteAccountContainer_viewer
       ...ChangeUsernameContainer_viewer
       ...ChangeEmailContainer_viewer
+      # AMG: added
+      profiles {
+        __typename
+      }
     }
   `,
   settings: graphql`
